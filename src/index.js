@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './style/index.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function App() {
+    return (
+        <main>
+            <header>
+                <h1>React todo</h1>
+            </header>
+            <section className="todo-list">
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+                <div className="todo completed">
+                    <button className="checkbox icon">
+                        <i className="material-icons">check_box_outline_blank</i>
+                    </button>
+                    <span className="todo-title">Learn JS</span>
+                    <button className="delete icon">
+                        <i className="material-icons">delete</i>
+                    </button>
+                </div>
+
+                <div className="todo">
+                    <button className="checkbox icon">
+                        <i className="material-icons">check_box_outline_blank</i>
+                    </button>
+                    <span className="todo-title">Learn React</span>
+                    <button className="delete icon">
+                        <i className="material-icons">delete</i>
+                    </button>
+                </div>
+
+            </section>
+        </main>
+    )
+}
+ReactDOM.render(<App/> , document.getElementById('root'));
