@@ -48,5 +48,10 @@ button {
         button:nth-of-type(2) {
             width: 5%;
         }
+        &.completed {
+            .todo-title {
+                text-decoration: line-through;
+            }
+        }
     }
 }
