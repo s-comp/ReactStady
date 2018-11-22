@@ -47,7 +47,8 @@ button {
 .todo-list {
     font-size: 24px;
     margin-bottom: 20px;
-    .todo {
+    .todo,
+    .todo-edit-form {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -59,9 +60,10 @@ button {
             margin-right: 10px;
         }
         .todo-title {
-            width: 86%;
+            width: 80%;
         }
-        button:nth-of-type(2) {
+        button.delete,
+        button.edit {
             width: 34px;
             height: 34px;
             display: none;
@@ -74,14 +76,17 @@ button {
         }
         &:hover {
             cursor: pointer;
-            button:nth-of-type(2) {
+            button.delete,
+            button.edit {
                 display: block;
             }
         }
     }
 }
 
-.todo-form {
+
+.todo-form,
+.todo-edit-form {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -98,6 +103,11 @@ button {
         }
     }
 
+}
+.todo-edit-form {
+    input {
+        width: 88%;
+    }
 }
 .btn-add {
     padding: 7px 20px;
